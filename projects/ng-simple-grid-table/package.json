@@ -1,12 +1,19 @@
 {
   "name": "ng-simple-grid-table",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Angulae based simple grid table just for presentational purpose",
+  "license": "MIT",
+  "repository": "ng-simple-grid-table",
+  "keywords": [
+    "angular",
+    "grid",
+    "table",
+    "angular2"
+  ],
   "peerDependencies": {
     "@angular/common": "^8.2.0",
     "@angular/core": "^8.2.0",
-    "@angular/animations": "~8.2.0",
     "@angular/compiler": "~8.2.0",
-    "@angular/forms": "~8.2.0",
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
