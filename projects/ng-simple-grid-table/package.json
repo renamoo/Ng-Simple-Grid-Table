@@ -1,7 +1,7 @@
 {
   "name": "ng-simple-grid-table",
-  "version": "1.0.0",
-  "description": "Angulae based simple grid table just for presentational purpose",
+  "version": "0.0.2",
+  "description": "Angular based simple grid table just for presentational purpose",
   "license": "MIT",
   "repository": "ng-simple-grid-table",
   "keywords": [
