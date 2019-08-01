@@ -1,0 +1,87 @@
+.table{
+  border-collapse: collapse;
+  table-layout: fixed;
+  user-select:none;
+}
+
+@mixin cell-basic-style {
+  height: 25px;
+  padding: 0 5px;
+  border: 1px solid #CCC;
+  color: #222;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+$header-color: #F8F9FA;
+$selected-color: rgb(75, 137, 255);
+
+.header{
+  @include cell-basic-style;
+  background-color: $header-color;
+  font-size:0.9rem;
+  &.selected{
+    background-color: #E8EAED;
+  }
+}
+
+.cell{
+  @include cell-basic-style;
+  font-size:0.8rem;
+  position:relative;
+  color: #777;
+  cursor: default;
+  &.focused{
+    outline: 2px solid $selected-color;
+    outline-offset: -1.5px;
+  }
+}
+
+.index{
+  @include cell-basic-style;
+  background-color: $header-color;
+  font-size:0.8rem;
+  min-width: 46px;
+  &.selected{
+    background-color: #E8EAED;
+  }
+}
+
+.ngs-right-bottom{
+  background-color: $selected-color;
+  position: absolute;
+  z-index: 9;
+  right: -4px;
+  bottom: -4px;
+  cursor: crosshair;
+  width: 6px;
+  height: 6px;
+  border: 1px solid white;
+}
+
+.ngs-grid-table{
+  position: relative;
+}
+
+.cover{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: #E6EFFF;
+    z-index:-1;
+  &.hidden{
+    visibility: hidden;
+  }
+}
+
+.outline{
+  width:100%;
+  height: 100%;
+  outline: 1px solid $selected-color;
+  position:absolute;
+  top:0;
+  &.hidden{
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="ngs-grid-table">
+  <div class="cover" #cover
+    [class.hidden]="!(this.range && (this.range.endInd > this.range.startInd || this.range.colIds.length > 1))">
+  </div>
+
+  <table class="table" draggable="false">
+    <tr>
+      <th class="index"></th>
+      <th *ngFor="let col of columns" class="header" [class.selected]="focused?.colId === col.id">{{col.label}}</th>
+    </tr>
+    <tr *ngFor="let rowVals of values; let i = index">
+      <td class="index" [class.selected]="focused?.index === i" (click)="onFocus(i)">{{i + 1}}</td>
+      <td *ngFor="let col of columns" class="cell" id="ngs-{{col.id}}-{{i}}" (click)="onFocus(i, col.id)"
+        [class.focused]="focused?.colId === col.id && focused?.index === i" #cells>
+        {{rowVals[col.id]}}
+        <div class="ngs-right-bottom"
+          *ngIf="focused?.colId === col.id && focused?.index === i && !(this.range && (this.range.endInd > this.range.startInd || this.range.colIds.length > 1))"
+          (mousedown)="focused?.colId === col.id && focused?.index === i && selectedCells?.length === 0 && onDrag(col.id, i)"
+          #pointer>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="outline" #outline
+    [class.hidden]="!(this.range && (this.range.endInd > this.range.startInd || this.range.colIds.length > 1))">
+    <div class="ngs-right-bottom" (mousedown)="onDrag()">
+    </div>
+  </div>
