@@ -1,6 +1,7 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgSimpleGridTableModule } from 'ng-simple-grid-table';
+import { NgSimpleGridTableModule } from './../../projects/ng-simple-grid-table/src/lib/ng-simple-grid-table.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 

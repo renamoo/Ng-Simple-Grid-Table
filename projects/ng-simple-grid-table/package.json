@@ -1,6 +1,6 @@
 {
   "name": "ng-simple-grid-table",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Angular based simple grid table just for presentational purpose",
   "license": "MIT",
   "repository": "ng-simple-grid-table",
@@ -14,9 +14,6 @@
     "@angular/common": "^8.2.0",
     "@angular/core": "^8.2.0",
     "@angular/compiler": "~8.2.0",
-    "@angular/platform-browser": "~8.2.0",
-    "@angular/platform-browser-dynamic": "~8.2.0",
-    "@angular/router": "~8.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

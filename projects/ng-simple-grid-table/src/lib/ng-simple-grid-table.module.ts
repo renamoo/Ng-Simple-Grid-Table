@@ -1,12 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgsGridTable } from './grid-table.component';
 
 
 @NgModule({
   declarations: [NgsGridTable],
   imports: [
-    BrowserModule,
+    CommonModule
   ],
   exports: [NgsGridTable]
 })
